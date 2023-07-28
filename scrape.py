@@ -3,9 +3,9 @@ import requests
 from requests.auth import HTTPDigestAuth
 
 URL = "https://tds.ms/CentralizeSP/BtwScheduling/Lessons?SchedulingTypeId=1"
-#page = requests.get(URL, auth=HTTPDigestAuth('user', 'pass'))
+page = requests.get(URL, auth=HTTPDigestAuth('user', 'pass'))
 #page = requests.get(URL, auth=('user', 'pass'))
-page = requests.get(URL)
+#page = requests.get(URL)
 
 soup = BeautifulSoup(page.content, "html.parser")
 results = soup.find(id="divAvailabilityCalenderShow")
